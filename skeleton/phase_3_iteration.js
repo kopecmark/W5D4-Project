@@ -18,4 +18,21 @@ Array.prototype.bubbleSort = function () {
   return this;
 };
 
-console.log([3,5,7,3,2,9,5].bubbleSort());
+// console.log([3,5,7,3,2,9,5].bubbleSort());
+
+String.prototype.substrings = function () {
+  const result = [];
+
+  for (let idx1 = 0; idx1 < this.length; idx1++) {
+    let subResult = this[idx1];
+    result.push(subResult); //h
+
+    for (let idx2 = idx1 + 1; idx2 < this.length - 1; idx2++) {
+      subResult += this[idx2]; //hello
+      result.push(subResult);
+    }
+  }
+  return result;
+};
+
+console.log('hello'.substrings());
