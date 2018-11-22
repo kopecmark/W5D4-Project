@@ -12,17 +12,16 @@ Array.prototype.myEach = function (callback) {
   const result = [];
 
   for (let i = 0; i < this.length; i++) {
-    result.push(callback(this[i]));
+    callback(this[i]);
   }
 
-  return result;
 };
 
 // console.log([1,2,3].myEach(adder));
 
 
 Array.prototype.myMap = function (callback) {
-  // const result = [];
+  const result = [];
   return this.myEach(callback);
 };
 
